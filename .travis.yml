@@ -6,3 +6,4 @@ before_install:
   - npm config set @brightside:registry https://api.bintray.com/npm/ca/brightside
   - npm install -g @brightside/core@lts-incremental
   - zowe --version
+  - zowe profiles cre zosmf-profile CICD --host $ZOSMF_HOST --port $ZOSMF_PORT --user $ZOSMF_USER --password $ZOSMF_PW --reject-unauthorized false
