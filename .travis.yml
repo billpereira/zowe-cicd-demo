@@ -1,9 +1,8 @@
 language: node_js
-
+node_js: v8.16.1
 sudo: required
 
 before_install:
-  - sudo npm cache clean -f
   - npm config set @brightside:registry https://api.bintray.com/npm/ca/brightside
   - npm install -g @brightside/core@lts-incremental
   - zowe --version
