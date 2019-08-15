@@ -1,0 +1,23 @@
+{
+  "name": "zowe-ci-demo",
+  "version": "1.0.0",
+  "description": "Modern tools for CI on Z",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/billpereira/zowe-cicd-demo.git"
+  },
+  "keywords": [
+    "CI",
+    "Zowe"
+  ],
+  "author": "William Pereira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/billpereira/zowe-cicd-demo/issues"
+  },
+  "homepage": "https://github.com/billpereira/zowe-cicd-demo#readme"
+}

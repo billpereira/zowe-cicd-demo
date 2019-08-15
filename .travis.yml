@@ -1,0 +1,6 @@
+language: node_js
+
+before_install:
+  - npm config set @brightside:registry https://api.bintray.com/npm/ca/brightside
+  - npm install -g @brightside/core@next
+  - zowe --version
