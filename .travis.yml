@@ -10,5 +10,5 @@ before_install:
 
 script:
   - if [ "$TRAVIS_BRANCH" != "master" ]; then node scripts/createTestJobs.js ; fi
-  - if [ "$TRAVIS_BRANCH" != "master" ]; npm run test ; fi
-  - if [ "$TRAVIS_BRANCH" = "master" ]; npm run deploy ; fi
+  - if [ "$TRAVIS_BRANCH" != "master" ]; then npm run test ; fi
+  - if [ "$TRAVIS_BRANCH" = "master" ]; then npm run deploy ; fi
