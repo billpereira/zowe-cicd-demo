@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test:watch": "jest --watch",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "deploy": "node script/uploadNewSource"
   },
   "repository": {
     "type": "git",
