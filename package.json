@@ -6,7 +6,7 @@
   "scripts": {
     "test:watch": "jest --watch",
     "test": "jest --coverage",
-    "deploy": "node script/uploadNewSource"
+    "deploy": "node scripts/uploadNewSource"
   },
   "repository": {
     "type": "git",
