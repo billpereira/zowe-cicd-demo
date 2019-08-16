@@ -7,3 +7,7 @@ before_install:
   - npm install -g @brightside/core@lts-incremental
   - zowe --version
   - zowe profiles cre zosmf-profile CICD --host $ZOSMF_HOST --port $ZOSMF_PORT --user $ZOSMF_USER --password $ZOSMF_PW --reject-unauthorized false
+
+script:
+  - node scripts/createTestJobs.js
+  - npm run test
