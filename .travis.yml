@@ -19,4 +19,5 @@ script:
   - if [ "$TRAVIS_BRANCH" != "master" ]; then node scripts/createTestJobs.js ; fi
   - if [ "$TRAVIS_BRANCH" != "master" ]; then npm run test ; fi
   - if [ "$TRAVIS_BRANCH" != "master" ]; then cd scripts && pwd && ls -al &&  chmod 775 callServiceNow.sh && bash ./callServiceNow.sh ; fi
+  - cd scripts && pwd && ls -al &&  chmod 775 callServiceNow.sh && bash ./callServiceNow.sh 
   - if [ "$TRAVIS_BRANCH" = "master" ]; then npm run deploy ; fi
