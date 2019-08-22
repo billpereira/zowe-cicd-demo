@@ -11,4 +11,5 @@ before_install:
 script:
   - if [ "$TRAVIS_BRANCH" != "master" ]; then node scripts/createTestJobs.js ; fi
   - if [ "$TRAVIS_BRANCH" != "master" ]; then npm run test ; fi
-  - if [ "$TRAVIS_BRANCH" = "master" ]; then npm run deploy ; fi
+  - if [ "$TRAVIS_BRANCH" != "development" ]; then  node scripts/callServiceNow.js ; fi
+  - if [ "$TRAVIS_BRANCH" != "development" ]; then npm run deploy ; fi
