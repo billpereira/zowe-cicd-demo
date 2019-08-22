@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/billpereira/zowe-cicd-demo#readme",
   "dependencies": {
+    "axios": "^0.19.0",
     "babel-jest": "^24.8.0",
     "jest": "^24.8.0",
     "jest-cli": "^24.8.0"

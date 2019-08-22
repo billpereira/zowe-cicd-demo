@@ -1,40 +1,19 @@
-const https = require('https');
-let headers = { 
-  "Content-Type": "application/json",
-  "Accept": "application/json"
- }
+const axios = require('axios');
 
-let data = `{
-    "assignment_group":“Software“,
-    "assigned_to":“Thiago Gomes Muntoreanu“,
-    "crq_status":“ ”,
-    "request_status":“ ”,
-    "request_summary":“CDCI new JCL and Cobol"
-}`
+const data = {
+  assignment_group:'CobolDevs',
+  assigned_to:'Cidi',
+  crq_status:' ',
+  request_status:' ',
+  request_summary:'Updating CICD Cobol with Travis'
+} 
 
-let options = {
-  host: 'https://ibmpb3.service-now.com',
-  path: '/api/x_ibmg5_devops_cic/v1/cdci',
-  port: 443,
-  method:'POST',
-  headers,
-  auth: 'admin:admin',
-  body:{
-    data
+const config = {
+  headers:{'Accept':'application/json','Content-Type':'application/json'},
+  auth:{
+    username:'admin',
+    password:'admin'
   }
 }
 
-const req = https.request(options, (res) => {
-  console.log(`statusCode: ${res.statusCode}`)
-
-  res.on('data', (d) => {
-    process.stdout.write(d)
-  })
-})
-
-req.on('error', (error) => {
-  console.error(error)
-})
-
-req.write(data)
-req.end()
+axios.post('https://ibmpb3.service-now.com/api/x_ibmg5_devops_cic/v1/cdci',data,config)
