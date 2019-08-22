@@ -1,14 +1,6 @@
 language: node_js
 node_js: v8.16.1
 sudo: required
-dist: trusty
-
-addons:
-  apt:
-    packages:
-      - openssl
-      - libssl-dev
-      - libcurl4-openssl-dev
 
 before_install:
   - npm config set @brightside:registry https://api.bintray.com/npm/ca/brightside
@@ -19,5 +11,5 @@ before_install:
 script:
   - if [ "$TRAVIS_BRANCH" != "master" ]; then node scripts/createTestJobs.js ; fi
   - if [ "$TRAVIS_BRANCH" != "master" ]; then npm run test ; fi
-  - if [ "$TRAVIS_BRANCH" = "master" ]; then  node scripts/callServiceNow.js ; fi
-  - if [ "$TRAVIS_BRANCH" = "master" ]; then npm run deploy ; fi
+  - if [ "$TRAVIS_BRANCH" != "development" ]; then  node scripts/callServiceNow.js ; fi
+  - if [ "$TRAVIS_BRANCH" != "development" ]; then npm run deploy ; fi
