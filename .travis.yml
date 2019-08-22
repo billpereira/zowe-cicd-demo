@@ -1,6 +1,7 @@
 language: node_js
 node_js: v8.16.1
 sudo: required
+dist: trusty
 
 addons:
   apt:
