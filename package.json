@@ -6,6 +6,8 @@
   "scripts": {
     "test:watch": "jest --watch",
     "test": "jest --coverage",
+    "test-jobs": "node scripts/createTestJobs.js",
+    "servicenow": "node scripts/callServiceNow.js",
     "deploy": "node scripts/uploadNewSource"
   },
   "repository": {
