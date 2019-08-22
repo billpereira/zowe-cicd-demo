@@ -9,7 +9,7 @@ before_install:
   - zowe profiles cre zosmf-profile CICD --host $ZOSMF_HOST --port $ZOSMF_PORT --user $ZOSMF_USER --password $ZOSMF_PW --reject-unauthorized false
 
 script:
-  - if [ "$TRAVIS_BRANCH" != "master" ]; then node scripts/createTestJobs.js ; fi
-  - if [ "$TRAVIS_BRANCH" != "master" ]; then npm run test ; fi
-  - if [ "$TRAVIS_BRANCH" != "development" ]; then  node scripts/callServiceNow.js ; fi
-  - if [ "$TRAVIS_BRANCH" != "development" ]; then npm run deploy ; fi
+  - if [ "$TRAVIS_BRANCH" = "development" ]; then npm test-jobs ; fi
+  - if [ "$TRAVIS_BRANCH" = "development" ]; then npm run test ; fi
+  - if [ "$TRAVIS_BRANCH" = "master" ]; then  npm servicenow ; fi
+  - if [ "$TRAVIS_BRANCH" = "master" ]; then npm run deploy ; fi
