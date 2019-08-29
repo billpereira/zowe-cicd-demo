@@ -1,4 +1,4 @@
-//JOB02JCL JOB (#ACCT),'EXEC CBL',MSGCLASS=A,CLASS=A,
+//JOB02JCL JOB (#ACCT),'EXEC CBL',MSGCLASS=A,CLASS=B,
 //      MSGLEVEL=(1,1),REGION=0M,NOTIFY=&SYSUID.,SYSAFF=*
 //* ********************************************************************
 //* * RUN THE COMPILED PROGRAM
