@@ -1,4 +1,4 @@
-//JOB01JCL JOB (#ACCT),'COMP AND LNK',MSGCLASS=A,CLASS=A,
+//JOB01JCL JOB (#ACCT),'COMP AND LNK',MSGCLASS=A,CLASS=
 //      MSGLEVEL=(1,1),REGION=0M,NOTIFY=&SYSUID.,SYSAFF=*
 //* ********************************************************************
 //* * SAMPLE JOB TO COMPILE AND LINKEDIT OUR HELLO WORLD 
