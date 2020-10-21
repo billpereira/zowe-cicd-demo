@@ -5,4 +5,4 @@
 //* ********************************************************************
 //* *  
 //RUNCBL  EXEC  PGM=HELLOWRD
-//STEPLIB DD DISP=OLD,DSN=LBI9.CICD.LOAD
+//STEPLIB DD DISP=OLD,DSN=A99997.CICD.LOAD
